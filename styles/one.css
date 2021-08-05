@@ -23,7 +23,7 @@
     transform: translateX(-10px)
 }
 
-a:visited {
+a, a:visited {
     color: inherit;
 }
 
