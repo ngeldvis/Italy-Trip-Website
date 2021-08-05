@@ -1,0 +1,121 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.background-image {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    opacity: 0.5;
+    filter: saturate(1.2);
+}
+
+.container {
+    color: white;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 28px;
+    opacity: 0;
+    animation: 1s ease-out 0s 1 slideInFromRight forwards;
+}
+
+h2 {
+    font-family: var(--default-font);
+    font-size: 20px;
+    opacity: 0;
+    animation: 1s ease-out 0.2s 1 slideInFromRight forwards;
+}
+
+._404-text {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 150px;
+    font-family: var(--default-title-font);
+    font-weight: bold;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    z-index: 0;
+}
+
+.container-content {
+    transform: translateY(-50px);
+}
+
+.container-text {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    margin-top: -65px;
+}
+
+.home-button, .home-button:visited {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    font-family: var(--default-title-font);
+    opacity: 0;
+    animation: 1s ease-out 0.4s 1 slideInFromBottom forwards;
+}
+
+.home-button .arrow {
+    margin-left: 10px;
+    transition: transform 0.2s;
+}
+
+.home-button:hover .arrow {
+    transform: translateX(10px);
+}
+
+@media(min-width: 650px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    ._404-text {
+        font-size: 200px;
+    }
+
+    .container-text {
+        margin-top: -90px;
+    }
+}
+
+@media(min-width: 950px) {
+    h1 {
+        font-size: 75px;
+    }
+    
+    ._404-text {
+        font-size: 250px;
+    }
+    
+    .container-text {
+        margin-top: -120px;
+    }
+}
+
+.footer-message {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    border-radius: 15px 15px 0 0;
+    background-color: rgba(255, 255, 255, 0.6);    
+    z-index: 10;
+}
+
+.footer-message a:hover {
+    text-decoration: underline;
+}
