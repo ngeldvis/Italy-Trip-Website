@@ -332,3 +332,7 @@ p {
 .button:hover {
     background-color: var(--button-hover-color);
 }
+
+.highlights-button {
+    margin: 48px 0 0 0;
+}

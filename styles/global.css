@@ -55,6 +55,15 @@ img {
     z-index: 1;
 }
 
+@media(min-width: 1024px) {
+    .container {
+        max-width: 968px;
+        width: 100%;
+        padding: 24px 0;
+        margin: auto;
+    }
+}
+
 .header {
     font-size: 24px;
     border-bottom: 1px solid #ddd;
@@ -88,6 +97,7 @@ img {
     flex-direction: column;
     gap: 15px;
     z-index: 10;
+    padding: 48px 0;
 }
 
 @media(min-width: 600px) {    
@@ -112,15 +122,6 @@ img {
 .footer-content > div {
     width: 100%;
     text-align: center;
-}
-
-@media(min-width: 1024px) {
-    .container {
-        max-width: 968px;
-        width: 100%;
-        padding: 24px 0;
-        margin: auto;
-    }
 }
 
 @keyframes slideInFromLeft {

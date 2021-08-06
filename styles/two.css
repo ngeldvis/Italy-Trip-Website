@@ -53,6 +53,8 @@ p:nth-of-type(2) {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
+    max-width: 900px;
+    margin: auto;
     margin-top: 48px;
     opacity: 0;
     animation: 1s ease-out 1s 1 slideInFromBottom forwards;
@@ -67,7 +69,7 @@ p:nth-of-type(2) {
 }
 
 .gallery img:hover {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 @media(min-width: 568px){
