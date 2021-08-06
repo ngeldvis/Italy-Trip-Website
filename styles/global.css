@@ -4,6 +4,7 @@
 :root {
     --default-text-color: rgb(31, 31, 31);
     --subtitle-text-color: rgb(150, 150, 150);
+    --accent-color: #2e2e2e;
     --default-title-font: "Bree Serif";
     --default-font: "Roboto";
 }
@@ -22,6 +23,7 @@ body {
     font-family: var(--default-font), sans-serif;
     background-color: white;
     color: var(--default-text-color);
+    min-height: 100vh;
 }
 
 h1, h2 {
@@ -49,15 +51,74 @@ img {
 .container {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 24px;
     z-index: 1;
+}
+
+.header {
+    font-size: 24px;
+    border-bottom: 1px solid #ddd;
+}
+
+.home-button, .home-button:visited {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    font-size: 20px;
+    color: var(--default-text-color);
+    font-family: var(--default-title-font);
+    animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+.home-button .arrow {
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+.home-button:hover .arrow {
+    transform: translateX(-10px)
+}
+
+.footer {
+    background-color: var(--accent-color);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10;
+}
+
+@media(min-width: 600px) {    
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+    }
+}
+
+.footer-link, .footer-link:visited {
+    color: white;
+    font-size: 20px;
+    font-family: var(--default-title-font);
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-content > div {
+    width: 100%;
+    text-align: center;
 }
 
 @media(min-width: 1024px) {
     .container {
         max-width: 968px;
         width: 100%;
-        padding: 1.5rem 0;
+        padding: 24px 0;
         margin: auto;
     }
 }
