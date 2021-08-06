@@ -65,14 +65,25 @@ img {
 }
 
 .header {
-    font-size: 24px;
+    font-size: 14px 24px;
     border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+    padding: 14px 24px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media(min-width: 1024px) {
+    .header-container {
+        padding: 14px 0;
+    }
 }
 
 .home-button, .home-button:visited {
     display: flex;
     align-items: center;
-    margin-right: auto;
     font-size: 20px;
     color: var(--default-text-color);
     font-family: var(--default-title-font);
@@ -86,6 +97,21 @@ img {
 
 .home-button:hover .arrow {
     transform: translateX(-10px)
+}
+
+.secondary-button, .secondary-button:visited {
+    display: flex;
+    font-size: 18px;
+    color: white;
+    background-color: var(--accent-color);
+    padding: 10px 20px;
+    font-family: var(--default-title-font);
+    animation: 1s ease-out 0s 1 slideInFromRight;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.secondary-button:hover {
+    background-color: rgb(29, 29, 29);;
 }
 
 .footer {
